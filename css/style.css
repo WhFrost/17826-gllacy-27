@@ -3,8 +3,9 @@
   font-family: "Roboto";
   font-style: normal;
 
-  src: url(/fonts/roboto.woff),
-  url(/fonts/roboto.woff2);
+  font-display: swap;
+  src: url(/fonts/roboto.woff2),
+  url(/fonts/roboto.woff);
 }
 
 @font-face {
@@ -12,8 +13,9 @@
   font-family: "Roboto";
   font-style: normal;
 
-  src: url(/fonts/robotomedium.woff),
-  url(/fonts/robotomedium.woff2);
+  font-display: swap;
+  src: url(/fonts/robotomedium.woff2),
+  url(/fonts/robotomedium.woff);
 }
 
 @font-face {
@@ -21,8 +23,9 @@
   font-family: "Roboto";
   font-style: normal;
 
-  src: url(/fonts/robotobold.woff),
-  url(/fonts/robotobold.woff2);
+  font-display: swap;
+  src: url(/fonts/robotobold.woff2),
+  url(/fonts/robotobold.woff);
 }
 
 html,
