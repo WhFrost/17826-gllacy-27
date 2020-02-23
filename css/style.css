@@ -1,3 +1,14 @@
+@font-face {
+  font-family: "Roboto";
+
+  src: url(/fonts/roboto.woff),
+  url(/fonts/roboto.woff2),
+  url(/fonts/robotobold.woff),
+  url(/fonts/robotobold.woff2),
+  url(/fonts/robotomedium.woff),
+  url(/fonts/robotomedium.woff2);
+}
+
 html,
 body {
   margin: 0;
@@ -5,11 +16,414 @@ body {
 
   font-size: 18px;
   line-height: 1.2;
-  font-family: Roboto, "Arial", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 
   background-color: #849d8f;
 }
 
+/* Header */
+
+.main-header {
+  font-weight: 700;
+  color: white;
+}
+
+.menu-list,
+.submenu-list,
+.user-menu-list,
+.login-list {
+  list-style: none;
+}
+
+.menu-list a:hover,
+.menu-list a:focus,
+.user-menu-list a:hover,
+.user-menu-list a:focus {
+  color: #323232;
+
+  background-color: white;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.submenu-list a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: white;
+}
+
+.submenu-list a {
+  color: #323232;
+}
+
+.submenu-list a,
+.user-menu-list a {
+  border-bottom: 0;
+}
+
+.submenu-list li:first-child a {
+  font-weight: 700;
+}
+
+.submenu-list a:hover,
+.submenu-list a:focus,
+.login-list a:hover,
+.login-list a:focus {
+  background-color: #ffbc9e;
+}
+
+.menu-list {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.user-menu-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.user-menu-list a:hover svg {
+  filter: invert(100%);
+}
+
+.login-list {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.login-list .login-link {
+  color: #323232;
+}
+
+.work-time {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.header-phone {
+  font-size: 22px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.header-phone a {
+  color: white;
+  text-decoration: none;
+}
+
+.search {
+  display: none;
+}
+
+.login {
+  display: none;
+}
+
+.cart {
+  display: none;
+}
+
+.breadcrumbs-list {
+  list-style: none;
+}
+.breadcrumbs-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+.breadcrumbs-list li:last-child a {
+  border-bottom: 0;
+}
+
+.breadcrumbs-link {
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.catalog-title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: left;
+  color: white;
+}
+/* Header */
+
+/* Promo-blocks */
+
+.promotion {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: white;
+}
+.promotion:first-child {
+  background-image: url(/img/raspberry-free.jpg);
+}
+.promotion:last-child {
+  background-image: url(/img/chocolate-free.jpg);
+}
+
+.promo-title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/* Promo-blocks */
+
+/* Promo-blocks */
+
+.catalog {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-link {
+  color: white;
+  text-decoration: none;
+}
+
+.catalog-item-link img {
+  border-radius: 50%;
+}
+
+.catalog-item-link .item-description {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cost {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.weight {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+/* Promo-blocks */
+
+/* About (SEO) */
+
+.about {
+  text-align: left;
+  color: #323232;
+
+  background-image: url(/img//seo-bg.png);
+  border-radius: 15px;
+}
+
+.about-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.about-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.about-content:nth-child(2)::before {
+  content: url(/img/ice-cream.svg);
+}
+
+.about-content:nth-child(3)::before {
+  content: url(/img/eco.svg);
+}
+
+.about-content:nth-child(4)::before {
+  content: url(/img/cow.svg);
+}
+
+.about-content:last-child::before {
+  content: url(/img/thermometer.svg);
+}
+
+/* About (SEO) */
+
+
+/* News & subscription */
+.news {
+  text-align: left;
+  color: #323232;
+
+  background-color: #f8d2c4;
+  background-image: url(/img/strawberry-background.jpg);
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.news-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.news-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: inherit;
+}
+
+.subscription {
+  background-image: url(/img/subscribe-form-border-bg.png);
+}
+
+.subscription-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #5a5a5a;
+}
+
+/* News & subscription */
+
+/* Maps & adress */
+
+.adress-container {
+  background-color: white;
+}
+
+.adress-content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #323232;
+}
+
+.adress-company {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #323232;
+  text-decoration: none;
+}
+
+.subscribe {
+  display: none;
+}
+
+/* Maps & adress */
+
+/* Page paginator */
+.page-paginator {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.page-paginator-list {
+  list-style: none;
+}
+
+.page-paginator-link {
+  color: white;
+  text-decoration: none;
+}
+
+
+.page-paginator-link:hover {
+  color: black;
+
+  background-color: white;
+  border-radius: 50%;
+}
+
+.page-paginator-item:first-child svg {
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+.page-paginator-item a:hover svg {
+  filter: invert(100%);
+}
+
+/* Page paginator */
+
+/* Footer */
+
+.social-list {
+  list-style: none;
+}
+
+.social-list-link svg {
+  opacity: 0.8;
+}
+
+.footer-menu-list {
+  list-style: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.footer-menu-item:first-child {
+  font-weight: 700;
+}
+
+.footer-menu-list:first-child::before {
+  content: url(/img/heart.svg);
+}
+
+.footer-menu-link {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.copyright-link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-copyright {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+
+/* Slider */
 .site-wrapper {
   min-width: 940px;
 
@@ -74,37 +488,6 @@ body {
   line-height: 60px;
 }
 
-.button-orange {
-  display: inline-block;
-  padding: 12px 44px;
-
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
-  vertical-align: top;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  background-color: #f26843;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  cursor: pointer;
-}
-
-.button-orange:hover {
-  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.button-orange:active {
-  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
 .slider-controls {
   position: absolute;
   bottom: 63px;
@@ -155,6 +538,40 @@ body {
 #product-3:checked ~ .site-wrapper label[for="product-3"] {
   background-color: white;
 }
+
+/* Slider */
+
+.button-orange {
+  display: inline-block;
+  padding: 12px 44px;
+
+  font-weight: 700;
+  font-size: 31px;
+  line-height: 41px;
+  vertical-align: top;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  background-color: #f26843;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+  cursor: pointer;
+}
+
+.button-orange:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button-orange:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
