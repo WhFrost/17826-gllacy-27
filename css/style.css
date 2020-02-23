@@ -1,12 +1,28 @@
 @font-face {
+  font-weight: 400;
   font-family: "Roboto";
+  font-style: normal;
 
   src: url(/fonts/roboto.woff),
-  url(/fonts/roboto.woff2),
-  url(/fonts/robotobold.woff),
-  url(/fonts/robotobold.woff2),
-  url(/fonts/robotomedium.woff),
+  url(/fonts/roboto.woff2);
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Roboto";
+  font-style: normal;
+
+  src: url(/fonts/robotomedium.woff),
   url(/fonts/robotomedium.woff2);
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-style: normal;
+
+  src: url(/fonts/robotobold.woff),
+  url(/fonts/robotobold.woff2);
 }
 
 html,
@@ -22,7 +38,6 @@ body {
 }
 
 /* Header */
-
 .main-header {
   font-weight: 700;
   color: white;
@@ -67,7 +82,7 @@ body {
   border-bottom: 0;
 }
 
-.submenu-list li:first-child a {
+.submenu-list .new {
   font-weight: 700;
 }
 
@@ -89,7 +104,7 @@ body {
   line-height: 16px;
 }
 
-.user-menu-list a:hover svg {
+.user-menu-link:hover svg {
   filter: invert(100%);
 }
 
@@ -124,8 +139,24 @@ body {
   display: none;
 }
 
+.search input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
 .login {
   display: none;
+}
+
+.login input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
 }
 
 .cart {
@@ -135,11 +166,13 @@ body {
 .breadcrumbs-list {
   list-style: none;
 }
+
 .breadcrumbs-item {
   font-weight: 400;
   font-size: 14px;
   line-height: 16px;
 }
+
 .breadcrumbs-list li:last-child a {
   border-bottom: 0;
 }
@@ -158,10 +191,29 @@ body {
   text-align: left;
   color: white;
 }
+
 /* Header */
 
-/* Promo-blocks */
+/* Filters */
+.filters-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: white;
+}
 
+.filters-radio,
+.filters-checkbox {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: white;
+}
+
+/* Filters */
+
+/* Promo-blocks */
 .promotion {
   font-weight: 700;
   font-size: 18px;
@@ -171,11 +223,13 @@ body {
 
   border-radius: 15px;
 }
-.promotion:first-child {
+
+.raspberry-free {
   background-image: url(/img/raspberry-free.jpg);
   background-repeat: no-repeat;
 }
-.promotion:last-child {
+
+.chocolate-free {
   background-image: url(/img/chocolate-free.jpg);
   background-repeat: no-repeat;
 }
@@ -187,8 +241,7 @@ body {
 
 /* Promo-blocks */
 
-/* Promo-blocks */
-
+/* Catalog */
 .catalog {
   font-weight: 500;
   font-size: 16px;
@@ -205,7 +258,7 @@ body {
   text-decoration: none;
 }
 
-.catalog-item-link img {
+.catalog-item-image {
   border-radius: 50%;
 }
 
@@ -225,10 +278,9 @@ body {
   line-height: 45px;
 }
 
-/* Promo-blocks */
+/* Catalog */
 
 /* About (SEO) */
-
 .about {
   text-align: left;
   color: #323232;
@@ -251,19 +303,19 @@ body {
   text-align: left;
 }
 
-.about-content:nth-child(2)::before {
+.ice-cream::before {
   content: url(/img/ice-cream.svg);
 }
 
-.about-content:nth-child(3)::before {
+.eco::before {
   content: url(/img/eco.svg);
 }
 
-.about-content:nth-child(4)::before {
+.cow::before {
   content: url(/img/cow.svg);
 }
 
-.about-content:last-child::before {
+.thermometr::before {
   content: url(/img/thermometer.svg);
 }
 
@@ -306,10 +358,17 @@ body {
   color: #5a5a5a;
 }
 
+.subscribe-form input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
 /* News & subscription */
 
 /* Maps & adress */
-
 .adress-container {
   background-color: white;
 }
@@ -341,6 +400,14 @@ body {
   display: none;
 }
 
+.subscribe input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
 /* Maps & adress */
 
 /* Page paginator */
@@ -359,7 +426,6 @@ body {
   text-decoration: none;
 }
 
-
 .page-paginator-link:hover {
   color: black;
 
@@ -371,14 +437,14 @@ body {
   transform: rotate(180deg);
   opacity: 0.2;
 }
-.page-paginator-item a:hover svg {
+
+.page-paginator-link:hover svg {
   filter: invert(100%);
 }
 
 /* Page paginator */
 
 /* Footer */
-
 .social-list {
   list-style: none;
 }
@@ -545,15 +611,21 @@ body {
 
 /* Slider */
 
-.button-orange {
-  display: inline-block;
-  padding: 12px 44px;
+.button {
+  padding: 14px 20px;
 
   font-weight: 700;
-  font-size: 31px;
-  line-height: 41px;
+  font-size: 18px;
+  line-height: 24px;
   vertical-align: top;
   text-align: center;
+  text-decoration: none;
+
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.button-orange {
   color: white;
   text-decoration: none;
   text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
@@ -563,7 +635,6 @@ body {
   border: none;
   border-radius: 50px;
   box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  cursor: pointer;
 }
 
 .button-orange:hover {
@@ -576,6 +647,26 @@ body {
   box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
 }
 
+.button-slider {
+  padding: 14px 41px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.button-filters {
+  padding: 10px 30px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: white;
+
+  background-color: white;
+  border: 2px solid white;
+  opacity: 0.2;
+}
 
 .visually-hidden:not(:focus):not(:active),
 input[type="checkbox"].visually-hidden,
