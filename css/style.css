@@ -168,12 +168,16 @@ body {
   line-height: 22px;
   text-align: left;
   color: white;
+
+  border-radius: 15px;
 }
 .promotion:first-child {
   background-image: url(/img/raspberry-free.jpg);
+  background-repeat: no-repeat;
 }
 .promotion:last-child {
   background-image: url(/img/chocolate-free.jpg);
+  background-repeat: no-repeat;
 }
 
 .promo-title {
