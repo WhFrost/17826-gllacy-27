@@ -4,8 +4,8 @@
   font-style: normal;
 
   font-display: swap;
-  src: url(/fonts/roboto.woff2),
-  url(/fonts/roboto.woff);
+  src: url("../fonts/roboto.woff2"),
+  url("../fonts/roboto.woff");
 }
 
 @font-face {
@@ -14,8 +14,8 @@
   font-style: normal;
 
   font-display: swap;
-  src: url(/fonts/robotomedium.woff2),
-  url(/fonts/robotomedium.woff);
+  src: url("../fonts/robotomedium.woff2"),
+  url("../fonts/robotomedium.woff");
 }
 
 @font-face {
@@ -24,8 +24,8 @@
   font-style: normal;
 
   font-display: swap;
-  src: url(/fonts/robotobold.woff2),
-  url(/fonts/robotobold.woff);
+  src: url("../fonts/robotobold.woff2"),
+  url("../fonts/robotobold.woff");
 }
 
 html,
@@ -90,10 +90,12 @@ body {
 }
 
 .submenu-list a:hover,
-.submenu-list a:focus,
-.login-list a:hover,
-.login-list a:focus {
-  background-color: #ffbc9e;
+.submenu-list a:focus {
+  background-color: #fbded7;
+}
+
+.submenu-list a:active {
+  background-color: #f6b5a5;
 }
 
 .menu-list {
@@ -228,12 +230,12 @@ body {
 }
 
 .raspberry-free {
-  background-image: url(/img/raspberry-free.jpg);
+  background-image: url("../img/raspberry-free.jpg");
   background-repeat: no-repeat;
 }
 
 .chocolate-free {
-  background-image: url(/img/chocolate-free.jpg);
+  background-image: url("../img/chocolate-free.jpg");
   background-repeat: no-repeat;
 }
 
@@ -288,7 +290,7 @@ body {
   text-align: left;
   color: #323232;
 
-  background-image: url(/img//seo-bg.png);
+  background-image: url("../img//seo-bg.png");
   border-radius: 15px;
 }
 
@@ -307,19 +309,19 @@ body {
 }
 
 .ice-cream::before {
-  content: url(/img/ice-cream.svg);
+  content: url("../img/ice-cream.svg");
 }
 
 .eco::before {
-  content: url(/img/eco.svg);
+  content: url("../img/eco.svg");
 }
 
 .cow::before {
-  content: url(/img/cow.svg);
+  content: url("../img/cow.svg");
 }
 
 .thermometr::before {
-  content: url(/img/thermometer.svg);
+  content: url("../img/thermometer.svg");
 }
 
 /* About (SEO) */
@@ -331,7 +333,7 @@ body {
   color: #323232;
 
   background-color: #f8d2c4;
-  background-image: url(/img/strawberry-background.jpg);
+  background-image: url("../img/strawberry-background.jpg");
   background-repeat: no-repeat;
   border-radius: 15px;
 }
@@ -350,7 +352,7 @@ body {
 }
 
 .subscription {
-  background-image: url(/img/subscribe-form-border-bg.png);
+  background-image: url("../img/subscribe-form-border-bg.png");
 }
 
 .subscription-content {
@@ -429,11 +431,18 @@ body {
   text-decoration: none;
 }
 
-.page-paginator-link:hover {
+.page-paginator-link:hover,
+.page-paginator-link:focus {
+  color: white;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.page-paginator-link:active {
   color: black;
 
   background-color: white;
-  border-radius: 50%;
 }
 
 .page-paginator-item:first-child svg {
@@ -441,7 +450,7 @@ body {
   opacity: 0.2;
 }
 
-.page-paginator-link:hover svg {
+.page-paginator-link:active svg {
   filter: invert(100%);
 }
 
@@ -469,12 +478,20 @@ body {
 }
 
 .footer-menu-list:first-child::before {
-  content: url(/img/heart.svg);
+  content: url("../img/heart.svg");
 }
 
 .footer-menu-link {
   color: white;
   text-decoration: none;
+}
+
+.footer-menu-link:hover,
+.footer-menu-link:focus,
+.footer-menu-link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid #ffbc9e;
 }
 
 .copyright {
@@ -489,6 +506,14 @@ body {
   text-decoration: none;
 }
 
+.copyright-link:hover,
+.copyright-link:focus,
+.copyright-link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid #ffbc9e;
+}
+
 .footer-copyright {
   text-decoration: underline;
 }
@@ -501,7 +526,7 @@ body {
   min-width: 940px;
 
   background-color: #849d8f;
-  background-image: url("/img/chocolate-ice-cream-and-lemon-sorbet.png");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png");
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -516,11 +541,11 @@ body {
 }
 
 .site-wrapper::before {
-  background-image: url("/img/chocolate-ice-cream-and-lemon-sorbet.png");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png");
 }
 
 .site-wrapper::after {
-  background-image: url("/img/creamy-strawberry-with-white-chocolate-powder.jpg");
+  background-image: url("../img/creamy-strawberry-with-white-chocolate-powder.jpg");
 }
 
 .slider-container {
@@ -586,17 +611,17 @@ body {
 
 #product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("/img/creme-brulee-and-ice-cream-with-raspberry-jam.png");
+  background-image: url("../img/creme-brulee-and-ice-cream-with-raspberry-jam.png");
 }
 
 #product-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("/img/chocolate-ice-cream-and-lemon-sorbet.png   ");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png   ");
 }
 
 #product-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("/img/ice-cream-with-fondant-and-strawberry-sorbet.png");
+  background-image: url("../img/ice-cream-with-fondant-and-strawberry-sorbet.png");
 }
 
 
@@ -669,6 +694,19 @@ body {
   background-color: white;
   border: 2px solid white;
   opacity: 0.2;
+}
+
+.button-filters:hover,
+.button-filters:focus {
+  color: #323232;
+
+  background-color: white;
+  opacity: 1;
+}
+
+.button-filters:active {
+  background-color: #ededed;
+  box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 .visually-hidden:not(:focus):not(:active),
