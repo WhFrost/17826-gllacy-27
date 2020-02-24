@@ -1,3 +1,33 @@
+@font-face {
+  font-weight: 400;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/roboto.woff2"),
+  url("../fonts/roboto.woff");
+}
+
+@font-face {
+  font-weight: 500;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/robotomedium.woff2"),
+  url("../fonts/robotomedium.woff");
+}
+
+@font-face {
+  font-weight: 700;
+  font-family: "Roboto";
+  font-style: normal;
+
+  font-display: swap;
+  src: url("../fonts/robotobold.woff2"),
+  url("../fonts/robotobold.woff");
+}
+
 html,
 body {
   margin: 0;
@@ -5,16 +35,498 @@ body {
 
   font-size: 18px;
   line-height: 1.2;
-  font-family: Roboto, "Arial", sans-serif;
+  font-family: "Roboto", Arial, sans-serif;
 
   background-color: #849d8f;
 }
 
+/* Header */
+.main-header {
+  font-weight: 700;
+  color: white;
+}
+
+.menu-list,
+.submenu-list,
+.user-menu-list,
+.login-list {
+  list-style: none;
+}
+
+.menu-list a:hover,
+.menu-list a:focus,
+.user-menu-list a:hover,
+.user-menu-list a:focus {
+  color: #323232;
+
+  background-color: white;
+}
+
+.main-menu a {
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.submenu-list a {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 15px;
+  color: white;
+}
+
+.submenu-list a {
+  color: #323232;
+}
+
+.submenu-list a,
+.user-menu-list a {
+  border-bottom: 0;
+}
+
+.submenu-list .new {
+  font-weight: 700;
+}
+
+.submenu-list a:hover,
+.submenu-list a:focus {
+  background-color: #fbded7;
+}
+
+.submenu-list a:active {
+  background-color: #f6b5a5;
+}
+
+.menu-list {
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.user-menu-list {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.user-menu-link:hover svg {
+  filter: invert(100%);
+}
+
+.login-list {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.login-list .login-link {
+  color: #323232;
+}
+
+.work-time {
+  font-size: 14px;
+  line-height: 16px;
+  text-align: right;
+}
+
+.header-phone {
+  font-size: 22px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.header-phone a {
+  color: white;
+  text-decoration: none;
+}
+
+.search {
+  display: none;
+}
+
+.search input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.login {
+  display: none;
+}
+
+.login input {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.cart {
+  display: none;
+}
+
+.breadcrumbs-list {
+  list-style: none;
+}
+
+.breadcrumbs-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs-list li:last-child a {
+  border-bottom: 0;
+}
+
+.breadcrumbs-link {
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.catalog-title {
+  font-weight: 700;
+  font-size: 35px;
+  line-height: 41px;
+  text-align: left;
+  color: white;
+}
+
+/* Header */
+
+/* Filters */
+.filters-name {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  text-align: left;
+  color: white;
+}
+
+.filters-radio,
+.filters-checkbox {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: white;
+}
+
+/* Filters */
+
+/* Promo-blocks */
+.promotion {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: left;
+  color: white;
+
+  border-radius: 15px;
+}
+
+.raspberry-free {
+  background-image: url("../img/raspberry-free.jpg");
+  background-repeat: no-repeat;
+}
+
+.chocolate-free {
+  background-image: url("../img/chocolate-free.jpg");
+  background-repeat: no-repeat;
+}
+
+.promo-title {
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/* Promo-blocks */
+
+/* Catalog */
+.catalog {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: center;
+}
+
+.catalog-list {
+  list-style: none;
+}
+
+.catalog-item-link {
+  color: white;
+  text-decoration: none;
+}
+
+.catalog-item-image {
+  border-radius: 50%;
+}
+
+.catalog-item-link .item-description {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cost {
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 45px;
+}
+
+.weight {
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 45px;
+}
+
+/* Catalog */
+
+/* About (SEO) */
+.about {
+  text-align: left;
+  color: #323232;
+
+  background-image: url("../img//seo-bg.png");
+  border-radius: 15px;
+}
+
+.about-title {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: left;
+}
+
+.about-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+}
+
+.ice-cream::before {
+  content: url("../img/ice-cream.svg");
+}
+
+.eco::before {
+  content: url("../img/eco.svg");
+}
+
+.cow::before {
+  content: url("../img/cow.svg");
+}
+
+.thermometr::before {
+  content: url("../img/thermometer.svg");
+}
+
+/* About (SEO) */
+
+
+/* News & subscription */
+.news {
+  text-align: left;
+  color: #323232;
+
+  background-color: #f8d2c4;
+  background-image: url("../img/strawberry-background.jpg");
+  background-repeat: no-repeat;
+  border-radius: 15px;
+}
+
+.news-title {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+.news-link {
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 30px;
+  color: inherit;
+}
+
+.subscription {
+  background-image: url("../img/subscribe-form-border-bg.png");
+}
+
+.subscription-content {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  text-align: left;
+  color: #5a5a5a;
+}
+
+.subscribe-form input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+/* News & subscription */
+
+/* Maps & adress */
+.adress-container {
+  background-color: white;
+}
+
+.adress-content {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  text-align: left;
+  color: #323232;
+}
+
+.adress-company {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: left;
+}
+
+.phone {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 22px;
+  color: #323232;
+  text-decoration: none;
+}
+
+.subscribe {
+  display: none;
+}
+
+.subscribe input {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+/* Maps & adress */
+
+/* Page paginator */
+.page-paginator {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+}
+
+.page-paginator-list {
+  list-style: none;
+}
+
+.page-paginator-link {
+  color: white;
+  text-decoration: none;
+}
+
+.page-paginator-link:hover,
+.page-paginator-link:focus {
+  color: white;
+
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+}
+
+.page-paginator-link:active {
+  color: black;
+
+  background-color: white;
+}
+
+.page-paginator-item:first-child svg {
+  transform: rotate(180deg);
+  opacity: 0.2;
+}
+
+.page-paginator-link:active svg {
+  filter: invert(100%);
+}
+
+/* Page paginator */
+
+/* Footer */
+.social-list {
+  list-style: none;
+}
+
+.social-list-link svg {
+  opacity: 0.8;
+}
+
+.footer-menu-list {
+  list-style: none;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
+  text-align: left;
+}
+
+.footer-menu-item:first-child {
+  font-weight: 700;
+}
+
+.footer-menu-list:first-child::before {
+  content: url("../img/heart.svg");
+}
+
+.footer-menu-link {
+  color: white;
+  text-decoration: none;
+}
+
+.footer-menu-link:hover,
+.footer-menu-link:focus,
+.footer-menu-link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid #ffbc9e;
+}
+
+.copyright {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 18px;
+  text-decoration: none;
+}
+
+.copyright-link {
+  color: white;
+  text-decoration: none;
+}
+
+.copyright-link:hover,
+.copyright-link:focus,
+.copyright-link:active {
+  color: #ffbc9e;
+
+  border-bottom: 1px solid #ffbc9e;
+}
+
+.footer-copyright {
+  text-decoration: underline;
+}
+
+/* Footer */
+
+
+/* Slider */
 .site-wrapper {
   min-width: 940px;
 
   background-color: #849d8f;
-  background-image: url("/img/chocolate-ice-cream-and-lemon-sorbet.png");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png");
   background-repeat: no-repeat;
   background-position: top center;
 
@@ -29,11 +541,11 @@ body {
 }
 
 .site-wrapper::before {
-  background-image: url("/img/chocolate-ice-cream-and-lemon-sorbet.png");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png");
 }
 
 .site-wrapper::after {
-  background-image: url("/img/creamy-strawberry-with-white-chocolate-powder.jpg");
+  background-image: url("../img/creamy-strawberry-with-white-chocolate-powder.jpg");
 }
 
 .slider-container {
@@ -74,37 +586,6 @@ body {
   line-height: 60px;
 }
 
-.button-orange {
-  display: inline-block;
-  padding: 12px 44px;
-
-  font-weight: 600;
-  font-size: 31px;
-  line-height: 41px;
-  vertical-align: top;
-  text-align: center;
-  color: white;
-  text-decoration: none;
-  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
-
-  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
-  background-color: #f26843;
-  border: none;
-  border-radius: 50px;
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
-  cursor: pointer;
-}
-
-.button-orange:hover {
-  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
-  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
-}
-
-.button-orange:active {
-  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
-  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
-}
-
 .slider-controls {
   position: absolute;
   bottom: 63px;
@@ -130,17 +611,17 @@ body {
 
 #product-1:checked ~ .site-wrapper {
   background-color: #849d8f;
-  background-image: url("/img/creme-brulee-and-ice-cream-with-raspberry-jam.png");
+  background-image: url("../img/creme-brulee-and-ice-cream-with-raspberry-jam.png");
 }
 
 #product-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("/img/chocolate-ice-cream-and-lemon-sorbet.png   ");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png   ");
 }
 
 #product-3:checked ~ .site-wrapper {
   background-color: #9d8b84;
-  background-image: url("/img/ice-cream-with-fondant-and-strawberry-sorbet.png");
+  background-image: url("../img/ice-cream-with-fondant-and-strawberry-sorbet.png");
 }
 
 
@@ -154,6 +635,78 @@ body {
 #product-2:checked ~ .site-wrapper label[for="product-2"],
 #product-3:checked ~ .site-wrapper label[for="product-3"] {
   background-color: white;
+}
+
+/* Slider */
+
+.button {
+  padding: 14px 20px;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  vertical-align: top;
+  text-align: center;
+  text-decoration: none;
+
+  border-radius: 22px;
+  cursor: pointer;
+}
+
+.button-orange {
+  color: white;
+  text-decoration: none;
+  text-shadow: 0 2px 5px rgba(160, 32, 11, 0.76);
+
+  background: linear-gradient(to bottom, #f26843 0%, #e74a35 100%);
+  background-color: #f26843;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 0.64);
+}
+
+.button-orange:hover {
+  background: linear-gradient(to bottom, #f58669 0%, #ec6f5e 100%);
+  box-shadow: 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button-orange:active {
+  background: linear-gradient(to bottom, #d84732 0%, #e1613e 100%);
+  box-shadow: inset 0 2px 2px rgba(172, 16, 0, 1);
+}
+
+.button-slider {
+  padding: 14px 41px;
+
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+}
+
+.button-filters {
+  padding: 10px 30px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 18px;
+  color: white;
+
+  background-color: white;
+  border: 2px solid white;
+  opacity: 0.2;
+}
+
+.button-filters:hover,
+.button-filters:focus {
+  color: #323232;
+
+  background-color: white;
+  opacity: 1;
+}
+
+.button-filters:active {
+  background-color: #ededed;
+  box-shadow: inset 0 2px 1px 0 #696969;
 }
 
 .visually-hidden:not(:focus):not(:active),
