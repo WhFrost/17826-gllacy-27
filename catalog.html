@@ -13,165 +13,169 @@
 <body>
   <!-- Header-->
   <header class="main-header">
-    <a href="index.html">
-      <img src="img/logo.svg" alt="Логотип Gllacy Shop">
-    </a>
     <nav class="main-menu">
-      <ul class="menu-list">
-        <li class="menu-item">
-          <a href="#" class="menu-link">Каталог</a>
-          <ul class="submenu-list">
-            <li class="submenu-item submenu-item-new">
-              <a href="#" class="submenu-link">Новинки</a>
-            </li>
-            <li class="submenu-item">
-              <a href="catalog.html" class="submenu-link">Сливочное</a>
-            </li>
-            <li class="submenu-item">
-              <a href="#" class="submenu-link">Фруктовый лед</a></li>
-            <li class="submenu-item">
-              <a href="#" class="submenu-link">Мелорин</a>
-            </li>
-            <li class="submenu-item">
-              <a href="#" class="submenu-link">Щербеты</a>
-            </li>
-          </ul>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">Доставка и оплата</a>
-        </li>
-        <li class="menu-item">
-          <a href="#" class="menu-link">О Компании</a>
-        </li>
-      </ul>
-      <ul class="user-menu-list">
-        <li class="user-menu-item">
-          <a href="#" class="user-menu-link user-menu-link-search">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
-              viewBox="0 0 17 17">
-              <path fill="#fff"
-                d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
-            </svg>
-          </a>
-        </li>
-        <li class="user-menu-item">
-          <a href="#" class="user-menu-link user-menu-link-login">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
-              viewBox="0 0 21 19">
-              <g fill="#fff">
-                <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
-                <path
-                  d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
-              </g>
-            </svg>
-            Вход
-          </a>
-        </li>
-        <li class="user-menu-item">
-          <a href="#" class="user-menu-link full-cart">
-            <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
-              <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
-              <circle fill="#343434" cx="6.984" cy="18" r="2" />
-              <circle fill="#343434" cx="15.984" cy="18" r="2" />
-              <path fill="#343434"
-                d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
-            </svg>
-            2 товара
-          </a>
-        </li>
-      </ul>
-
-      <!-- Search pop-up -->
-      <div class="search">
-        <form class="search-form">
-          <label for="search" class="visually-hidden">Поиск</label>
-          <input type="search" name="search" id="search" placeholder="Крем-брюле">
-        </form>
-      </div>
-      <!-- Search pop-up -->
-
-      <!-- User login pop-up -->
-      <div class="login">
-        <form action="#" method="post" class="login">
-          <label for="user-name" class="visually-hidden">Имя пользователя</label>
-          <label for="user-pass" class="visually-hidden"> Пароль пользователя</label>
-          <input type="email" name="user-name" id="user-name" placeholder="email@example.com" required>
-          <input type="password" name="user-pass" id="user-pass" placeholder="••••••••" required>
-          <button type="submit" class="button button-orange">Войти</button>
-        </form>
-        <ul class="login-list">
-          <li class="login-items">
-            <a href="#" class="login-link">Забыли пароль?</a>
+      <a href="index.html">
+        <img src="img/logo.svg" class="main-header-logo" alt="Логотип Gllacy Shop">
+      </a>
+      <div class="menu-wrapper">
+        <ul class="menu-list">
+          <li class="menu-item catalog-menu">
+            <a href="#" class="menu-link">Каталог</a>
+            <ul class="submenu-list">
+              <li class="submenu-item submenu-item-new">
+                <a href="#" class="submenu-link new">Новинки</a>
+              </li>
+              <li class="submenu-item">
+                <a href="catalog.html" class="submenu-link">Сливочное</a>
+              </li>
+              <li class="submenu-item">
+                <a href="#" class="submenu-link">Фруктовый лед</a></li>
+              <li class="submenu-item">
+                <a href="#" class="submenu-link">Мелорин</a>
+              </li>
+              <li class="submenu-item">
+                <a href="#" class="submenu-link">Щербеты</a>
+              </li>
+            </ul>
           </li>
-          <li class="login-items">
-            <a href="#" class="login-link">Новая регистрация</a>
+          <li class="menu-item">
+            <a href="#" class="menu-link">Доставка и оплата</a>
+          </li>
+          <li class="menu-item">
+            <a href="#" class="menu-link">О Компании</a>
           </li>
         </ul>
-      </div>
-      <!-- User login pop-up -->
+        <ul class="user-menu-list">
+          <li class="user-menu-item">
+            <a href="#" class="user-menu-link user-menu-link-search">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
+                viewBox="0 0 17 17">
+                <path fill="#fff"
+                  d="M16.958 15.527L11.75 10.32A6.455 6.455 0 0 0 13 6.5 6.5 6.5 0 1 0 6.5 13a6.465 6.465 0 0 0 3.839-1.263l5.205 5.204 1.414-1.414zM6.5 11C4.019 11 2 8.981 2 6.5S4.019 2 6.5 2 11 4.019 11 6.5 8.981 11 6.5 11z" />
+              </svg>
+            </a>
+          </li>
+          <li class="user-menu-item">
+            <a href="#" class="user-menu-link user-menu-link-login">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="19"
+                viewBox="0 0 21 19">
+                <g fill="#fff">
+                  <path d="M6 14.875L12.917 9.5 6 4.125v2.917H-.042v4.917H6z" />
+                  <path
+                    d="M18 0H5C3.9 0 3 .9 3 2v2h2V2h13v15H5v-2H3v2c0 1.1.9 2 2 2h13c1.1 0 2-.9 2-2V2c0-1.1-.9-2-2-2z" />
+                </g>
+              </svg>
+              Вход
+            </a>
+          </li>
+          <li class="user-menu-item">
+            <a href="#" class="user-menu-link full-cart">
+              <svg xmlns="http://www.w3.org/2000/svg" width="21" height="20" viewBox="0 0 21 20">
+                <path fill="#E84D37" d="M5.888 4.031L6.922 13h10.45l1.176-8.969z" />
+                <circle fill="#343434" cx="6.984" cy="18" r="2" />
+                <circle fill="#343434" cx="15.984" cy="18" r="2" />
+                <path fill="#343434"
+                  d="M5.657 2.031L5.422 0H0v2h3.64l1.5 13h13.988l1.699-12.969H5.657zM17.372 13H6.922L5.888 4.031h12.66L17.372 13z" />
+              </svg>
+              2 товара
+            </a>
+          </li>
+        </ul>
 
-      <!-- User cart -->
-      <div class="cart">
-        <table class="user-cart">
-          <tr>
-            <td>
-              <button type="button" class="delete"></button>
-            <td>
-              <img src="img/creamy-with-orange-jam-and-citrus-shavings-small.jpg" alt="Пломбир с апельсиновым джемом">
-            </td>
-            <td>
-              Пломбир с апельсиновым джемом
-            </td>
-            <td>
-              1,5 кг х <span class="cost-in-cart">200 руб.</span>
-            </td>
-            <td>300 руб.</td>
-          </tr>
-          <tr>
-            <td>
-              <button type="button" class="delete"></button>
-            </td>
-            <td>
-              <img src="img/creamy-strawberry-with-white-chocolate-powder-small.jpg"
-                alt="Клубничный пломбир с присыпкой из белого шоколада">
-            </td>
-            <td>
-              Клубничный пломбир с присыпкой из белого шоколада
-            </td>
-            <td>
-              1,5 кг х <span class="cost-in-cart">300 руб.</span>
-            </td>
-            <td>
-              450 руб.
-            </td>
-          </tr>
-          <tr>
-            <td colspan="3">Итого:</td>
-            <td>750 руб.</td>
-          </tr>
-        </table>
-        <button type="submit" class="button button-orange"></button>
+        <!-- Search pop-up -->
+        <div class="search">
+          <form class="search-form">
+            <label for="search" class="visually-hidden">Поиск</label>
+            <input type="search" name="search" id="search" placeholder="Крем-брюле">
+          </form>
+        </div>
+        <!-- Search pop-up -->
+
+        <!-- User login pop-up -->
+        <div class="login">
+          <form action="#" method="post" class="login">
+            <label for="user-name" class="visually-hidden">Имя пользователя</label>
+            <label for="user-pass" class="visually-hidden"> Пароль пользователя</label>
+            <input type="email" name="user-name" id="user-name" placeholder="email@example.com" required>
+            <input type="password" name="user-pass" id="user-pass" placeholder="••••••••" required>
+            <button type="submit" class="button button-orange">Войти</button>
+          </form>
+          <ul class="login-list">
+            <li class="login-items">
+              <a href="#" class="login-link">Забыли пароль?</a>
+            </li>
+            <li class="login-items">
+              <a href="#" class="login-link">Новая регистрация</a>
+            </li>
+          </ul>
+        </div>
+        <!-- User login pop-up -->
+
+        <!-- User cart -->
+        <div class="cart">
+          <table class="user-cart">
+            <tr>
+              <td>
+                <button type="button" class="delete"></button>
+              <td>
+                <img src="img/creamy-with-orange-jam-and-citrus-shavings-small.jpg" alt="Пломбир с апельсиновым джемом">
+              </td>
+              <td>
+                Пломбир с апельсиновым джемом
+              </td>
+              <td>
+                1,5 кг х <span class="cost-in-cart">200 руб.</span>
+              </td>
+              <td>300 руб.</td>
+            </tr>
+            <tr>
+              <td>
+                <button type="button" class="delete"></button>
+              </td>
+              <td>
+                <img src="img/creamy-strawberry-with-white-chocolate-powder-small.jpg"
+                  alt="Клубничный пломбир с присыпкой из белого шоколада">
+              </td>
+              <td>
+                Клубничный пломбир с присыпкой из белого шоколада
+              </td>
+              <td>
+                1,5 кг х <span class="cost-in-cart">300 руб.</span>
+              </td>
+              <td>
+                450 руб.
+              </td>
+            </tr>
+            <tr>
+              <td colspan="3">Итого:</td>
+              <td>750 руб.</td>
+            </tr>
+          </table>
+          <button type="submit" class="button button-orange"></button>
+        </div>
+        <!-- User cart -->
       </div>
-      <!-- User cart -->
     </nav>
     <p class="work-time">С 10 до 20, ежедневно</p>
     <p class="header-phone"><a href="tel:88124502525">8 812 450-25-25</a></p>
   </header>
   <!-- Header-->
 
-  <!-- Breadcrumb -->
-  <ul class="breadcrumbs-list">
-    <li class="breadcrumbs-item">
-      <a href="index.html" class="breadcrumbs-link">Главная</a>
-    </li>
-    <li class="breadcrumbs-item">
-      <a href="#" class="breadcrumbs-link">Каталог</a>
-    </li>
-    <li class="breadcrumbs-item">
-      <a href="#" class="breadcrumbs-link">Сливочное</a>
-    </li>
-  </ul>
-  <!-- Breadcrumb -->
+  <!-- Breadcrumbs -->
+  <section class="breadcrumbs">
+    <ul class="breadcrumbs-list">
+      <li class="breadcrumbs-item">
+        <a href="index.html" class="breadcrumbs-link">Главная</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a href="#" class="breadcrumbs-link">Каталог</a>
+      </li>
+      <li class="breadcrumbs-item">
+        <a href="#" class="breadcrumbs-link">Сливочное</a>
+      </li>
+    </ul>
+  </section>
+  <!-- Breadcrumbs -->
 
   <h1 class="catalog-title">Сливочное мороженое</h1>
 
@@ -260,7 +264,7 @@
           <p class="item-description">
             Сливочное с апельсиновым джемом и цитрусовой стружкой
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">310</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -277,7 +281,7 @@
           <p class="item-description">
             Сливочно-кофейное с кусочками шоколада
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">380</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -294,7 +298,7 @@
           <p class="item-description">
             Сливочно-клубничное с присыпкой из белого шоколада
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">355</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -311,7 +315,7 @@
           <p class="item-description">
             Сливочное крем-брюле с карамельной подливкой
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">415</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -328,7 +332,7 @@
           <p class="item-description">
             Сливочное с брусничным джемом
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">325</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -345,7 +349,7 @@
           <p class="item-description">
             Сливочно-черничное с цельными ягодами черники
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">410</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -362,7 +366,7 @@
           <p class="item-description">
             Сливочно-лимонное с карамельной присыпкой
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">375</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -379,7 +383,7 @@
           <p class="item-description">
             Сливочное с шоколадной стружкой
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">320</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -396,7 +400,7 @@
           <p class="item-description">
             Сливочно-ванильное с кусочками шоколада
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">440</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -413,7 +417,7 @@
           <p class="item-description">
             Сливочноe с ментоловым сиропом
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">435</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -430,7 +434,7 @@
           <p class="item-description">
             Сливочное с кусочками черного шоколада
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">355</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -447,7 +451,7 @@
           <p class="item-description">
             Сливочное с мятным сиропом
           </p>
-          <p class="cost">
+          <p class="cost-container">
             <span class="cost">420</span>
             <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
               <path fill="#FFF"
@@ -458,47 +462,48 @@
         </a>
       </li>
     </ul>
-
-    <!-- Page paginator -->
-    <div class="page-paginator">
-      <ul class="page-paginator-list">
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-              <path fill="#fff"
-                d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
-            </svg>
-          </a>
-        </li>
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">1</a>
-        </li>
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">2</a>
-        </li>
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">3</a>
-        </li>
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">4</a>
-        </li>
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">5</a>
-        </li>
-        <li class="page-paginator-item">
-          <a href="#" class="page-paginator-link">
-            <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-              <path fill="#fff"
-                d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
-            </svg>
-          </a>
-        </li>
-      </ul>
-    </div>
-    <!-- Page paginator -->
-
   </section>
   <!-- Catalog items -->
+
+  <!-- Page paginator -->
+  <div class="page-paginator">
+    <ul class="page-paginator-list">
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+            <path fill="#fff"
+              d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
+          </svg>
+        </a>
+      </li>
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">1</a>
+      </li>
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">2</a>
+      </li>
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">3</a>
+      </li>
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">4</a>
+      </li>
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">5</a>
+      </li>
+      <li class="page-paginator-item">
+        <a href="#" class="page-paginator-link">
+          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+            <path fill="#fff"
+              d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
+          </svg>
+        </a>
+      </li>
+    </ul>
+  </div>
+  <!-- Page paginator -->
+
+  <div class="hr"></div>
 
   <!-- Footer -->
   <footer class="main-footer">
@@ -555,6 +560,10 @@
     <section class="footer-menu">
       <ul class="footer-menu-list">
         <li class="footer-menu-item">
+          <svg xmlns="http://www.w3.org/2000/svg" width="15" height="13" viewBox="0 0 15 13">
+            <path fill="#FFF"
+              d="M10.799 0c-1.35 0-2.551.65-3.3 1.661A4.097 4.097 0 0 0 4.199 0C1.875 0 0 1.806 0 4.044 0 7.223 7.499 13 7.499 13s7.499-5.777 7.499-8.956C14.998 1.806 13.123 0 10.799 0z" />
+          </svg>
           <a href="#" class="footer-menu-link">
             Для поставщиков
           </a>
