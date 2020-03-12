@@ -26,7 +26,7 @@
                 <a href="#" class="submenu-link new">Новинки</a>
               </li>
               <li class="submenu-item">
-                <a href="catalog.html" class="submenu-link">Сливочное</a>
+                <a href="catalog.html" class="submenu-link active-page">Сливочное</a>
               </li>
               <li class="submenu-item">
                 <a href="#" class="submenu-link">Фруктовый лед</a></li>
@@ -46,7 +46,19 @@
           </li>
         </ul>
         <ul class="user-menu-list">
-          <li class="user-menu-item">
+          <li class="user-menu-item user-menu-item-search">
+
+            <!-- Search pop-up -->
+
+            <section class="search-modal">
+              <form class="search-form">
+                <label for="search" class="visually-hidden">Поиск</label>
+                <input class="search-field" type="search" name="search" id="search" placeholder="Крем-брюле">
+              </form>
+            </section>
+
+            <!-- Search pop-up -->
+
             <a href="#" class="user-menu-link user-menu-link-search">
               <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="17" height="17"
                 viewBox="0 0 17 17">
@@ -81,15 +93,6 @@
             </a>
           </li>
         </ul>
-
-        <!-- Search pop-up -->
-        <div class="search">
-          <form class="search-form">
-            <label for="search" class="visually-hidden">Поиск</label>
-            <input type="search" name="search" id="search" placeholder="Крем-брюле">
-          </form>
-        </div>
-        <!-- Search pop-up -->
 
         <!-- User login pop-up -->
         <div class="login">
@@ -156,101 +159,126 @@
         <!-- User cart -->
       </div>
     </nav>
-    <section class="contacts-contnainer">
+    <section class="contacts-container">
       <p class="work-time">С 10 до 20, ежедневно</p>
       <p class="header-phone"><a href="tel:88124502525">8 812 450-25-25</a></p>
     </section>
+
+    <!-- Breadcrumbs -->
+    <section class="breadcrumbs container">
+      <ul class="breadcrumbs-list">
+        <li class="breadcrumbs-item">
+          <a href="index.html" class="breadcrumbs-link">Главная</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a href="#" class="breadcrumbs-link">Каталог</a>
+        </li>
+        <li class="breadcrumbs-item">
+          <a href="#" class="breadcrumbs-link">Сливочное</a>
+        </li>
+      </ul>
+    </section>
+    <!-- Breadcrumbs -->
+
   </header>
   <!-- Header-->
-
-  <!-- Breadcrumbs -->
-  <section class="breadcrumbs container">
-    <ul class="breadcrumbs-list">
-      <li class="breadcrumbs-item">
-        <a href="index.html" class="breadcrumbs-link">Главная</a>
-      </li>
-      <li class="breadcrumbs-item">
-        <a href="#" class="breadcrumbs-link">Каталог</a>
-      </li>
-      <li class="breadcrumbs-item">
-        <a href="#" class="breadcrumbs-link">Сливочное</a>
-      </li>
-    </ul>
-  </section>
-  <!-- Breadcrumbs -->
 
   <h1 class="catalog-title container">Сливочное мороженое</h1>
 
   <!-- Filters -->
   <article class="filters container">
-    <form action="#" method="post">
-      <label for="popular" class="filters-name">Сортировка:</label>
-      <select name="popular" id="popular">
-        <option value="popular">по популярности</option>
-        <option value="low-cost">сначала недорогие</option>
-        <option value="high-cost">сначала дорогие</option>
-        <option value="fat-content">по жирности</option>
-      </select>
-      <svg xmlns="http://www.w3.org/2000/svg" width="11" height="10" viewBox="0 0 11 10">
-        <path fill="#fff" d="M5.5 10L0 0h11" />
-      </svg>
-      <label for="cost" class="filters-name">Цена: 100 руб. – 500 руб.</label>
-      <input type="range" name="cost" id="cost" min="0" max="800" step="10">
+    <form class="filters-form" action="#" method="post">
+
+      <fieldset class="sort-filter">
+        <legend class="filters-name">
+          Сортировка:
+        </legend>
+        <div class="filter-wrapper sort-wrapper">
+          <select name="popular" id="popular" class="sort-filter-select">
+            <option value="popular">по популярности</option>
+            <option value="low-cost">сначала недорогие</option>
+            <option value="high-cost">сначала дорогие</option>
+            <option value="fat-content">по жирности</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <fieldset class="cost-filter">
+        <legend class="filters-name">
+          Цена: 100 руб. – 500 руб.
+        </legend>
+        <div class="filter-wrapper cost-wrapper">
+          <div class="range-controls">
+            <div class="scale">
+              <div class="bar"></div>
+            </div>
+            <div class="range-toggle range-toggle-min"></div>
+            <div class="range-toggle range-toggle-max"></div>
+          </div>
+        </div>
+      </fieldset>
+
       <fieldset class="fat-content" id="fat-content">
         <legend class="filters-name">
           Жирность:
         </legend>
-        <label for="0%" class="filters-radio">
-          <input type="radio" name="fat-content" id="0%" value="0%" class="visually-hidden">
-          <span class="radio-indicator"></span>
-          0%
-        </label>
-        <label for="less-10%" class="filters-radio">
-          <input type="radio" name="fat-content" id="less-10%" value="less-10%" class="visually-hidden" checked>
-          <span class="radio-indicator"></span>
-          до 10%
-        </label>
-        <label for="less-30%" class="filters-radio">
-          <input type="radio" name="fat-content" id="less-30%" value="less-30%" class="visually-hidden">
-          <span class="radio-indicator"></span>
-          до 20%
-        </label>
-        <label for="more-30%" class="filters-radio">
-          <input type="radio" name="fat-content" id="more-30%" value="more-30%" class="visually-hidden">
-          <span class="radio-indicator"></span>
-          выше 30%
-        </label>
+        <div class="filter-wrapper fat-wrapper">
+          <label for="0%" class="filters-radio">
+            <input type="radio" name="fat-content" id="0%" value="0%" class="visually-hidden">
+            <span class="radio-indicator"></span>
+            0%
+          </label>
+          <label for="less-10%" class="filters-radio">
+            <input type="radio" name="fat-content" id="less-10%" value="less-10%" class="visually-hidden" checked>
+            <span class="radio-indicator"></span>
+            до 10%
+          </label>
+          <label for="less-30%" class="filters-radio">
+            <input type="radio" name="fat-content" id="less-30%" value="less-30%" class="visually-hidden">
+            <span class="radio-indicator"></span>
+            до 20%
+          </label>
+          <label for="more-30%" class="filters-radio">
+            <input type="radio" name="fat-content" id="more-30%" value="more-30%" class="visually-hidden">
+            <span class="radio-indicator"></span>
+            выше 30%
+          </label>
+        </div>
       </fieldset>
+
       <fieldset class="fillers">
         <legend class="filters-name">
           Наполнители:
         </legend>
-        <label for="chocolate" class="filters-checkbox">
-          <input type="checkbox" name="chocolate" id="chocolate" class="visually-hidden" checked>
-          <span class="checkbox-indicator"></span>
-          шоколадные
-        </label>
-        <label for="sugar" class="filters-checkbox">
-          <input type="checkbox" name="sugar" id="sugar" class="visually-hidden" checked>
-          <span class="checkbox-indicator"></span>
-          сахарные присыпки
-        </label>
-        <label for="fruits" class="filters-checkbox">
-          <input type="checkbox" name="fuits" id="fruits" class="visually-hidden">
-          <span class="checkbox-indicator"></span>
-          фрукты
-        </label>
-        <label for="syrup" class="filters-checkbox">
-          <input type="checkbox" name="syrup" id="syrup" class="visually-hidden">
-          <span class="checkbox-indicator"></span>
-          сиропы
-        </label>
-        <label for="jam" class="filters-checkbox">
-          <input type="checkbox" name="jam" id="jam" class="visually-hidden">
-          <span class="checkbox-indicator"></span>
-          джемы
-        </label>
+        <div class="filter-wrapper fillers-wrapper">
+          <label for="chocolate" class="filters-checkbox">
+            <input type="checkbox" name="chocolate" id="chocolate" class="visually-hidden" checked>
+            <span class="checkbox-indicator"></span>
+            шоколадные
+          </label>
+          <label for="sugar" class="filters-checkbox">
+            <input type="checkbox" name="sugar" id="sugar" class="visually-hidden" checked>
+            <span class="checkbox-indicator"></span>
+            сахарные присыпки
+          </label>
+          <label for="fruits" class="filters-checkbox">
+            <input type="checkbox" name="fuits" id="fruits" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            фрукты
+          </label>
+          <label for="syrup" class="filters-checkbox">
+            <input type="checkbox" name="syrup" id="syrup" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            сиропы
+          </label>
+          <label for="jam" class="filters-checkbox">
+            <input type="checkbox" name="jam" id="jam" class="visually-hidden">
+            <span class="checkbox-indicator"></span>
+            джемы
+          </label>
+        </div>
       </fieldset>
+
       <button type="submit" class="button button-filters">Применить</button>
     </form>
   </article>
@@ -317,23 +345,26 @@
         </a>
       </li>
       <li class="catalog-item">
-        <a href="#" class="catalog-item-link">
-          <div class="catalog-item-wrapper">
-            <img src="img/creme-brulee-cream-with-caramel-sauce.jpg" alt="Сливочное крем-брюле с карамельной подливкой"
-              class="catalog-item-image" width="267" height="267">
-            <p class="cost-container">
-              <span class="cost">415</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
-                <path fill="#FFF"
-                  d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z" />
-              </svg>
-              <span class="weight">/кг</span>
+        <div class="catalog-item-container">
+          <a href="#" class="catalog-item-link">
+            <div class="catalog-item-wrapper">
+              <img src="img/creme-brulee-cream-with-caramel-sauce.jpg"
+                alt="Сливочное крем-брюле с карамельной подливкой" class="catalog-item-image" width="267" height="267">
+              <p class="cost-container">
+                <span class="cost">415</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36">
+                  <path fill="#FFF"
+                    d="M11 21h7.451c5.247 0 9.5-4.253 9.5-9.5S23.698 2 18.451 2H6v14H2v5h4v3H2v5h4v4h5v-4h15v-5H11v-3zm0-14h7.451v-.03a4.53 4.53 0 0 1 0 9.06V16H11V7z" />
+                </svg>
+                <span class="weight">/кг</span>
+              </p>
+            </div>
+            <p class="item-description">
+              Сливочное крем-брюле с карамельной подливкой
             </p>
-          </div>
-          <p class="item-description">
-            Сливочное крем-брюле с карамельной подливкой
-          </p>
-        </a>
+          </a>
+          <button class="button button-orange button-catalog" type="button">Быстрый просмотр</button>
+        </div>
       </li>
       <li class="catalog-item">
         <a href="#" class="catalog-item-link">
@@ -496,14 +527,14 @@
     <ul class="page-paginator-list">
       <li class="page-paginator-item">
         <a href="#" class="page-paginator-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-            <path fill="#fff"
+          <svg class="page-paginator-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+            <path class="page-paginator-icon" fill="#fff"
               d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
           </svg>
         </a>
       </li>
       <li class="page-paginator-item">
-        <a href="#" class="page-paginator-link">1</a>
+        <a href="#" class="page-paginator-link active-page-paginator-link">1</a>
       </li>
       <li class="page-paginator-item">
         <a href="#" class="page-paginator-link">2</a>
@@ -519,8 +550,8 @@
       </li>
       <li class="page-paginator-item">
         <a href="#" class="page-paginator-link">
-          <svg xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
-            <path fill="#fff"
+          <svg class="page-paginator-icon" xmlns="http://www.w3.org/2000/svg" width="8" height="12" viewBox="0 0 8 12">
+            <path class="page-paginator-icon" fill="#fff"
               d="M7.237 5.642L1.73.132c-.2-.197-.52-.197-.717 0s-.198.52 0 .717L6.163 6l-5.15 5.15c-.2.198-.2.52 0 .717.098.1.228.148.357.148.13 0 .26-.05.358-.148l5.51-5.51c.198-.197.198-.517 0-.715z" />
           </svg>
         </a>
@@ -530,12 +561,12 @@
   <!-- Page paginator -->
 
   <!-- Footer -->
-  <footer class="main-footer container">
+  <footer class="main-footer container footer-line">
     <section class="social">
       <ul class="social-list">
         <li class="social-list-item">
           <a href="https://twitter.com/" class="social-list-link social-list-link--twitter">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <svg class="social-link-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <title>Twitter</title>
               <path fill="#FFF"
                 d="M16 0C7.164 0 0 7.164 0 16c0 8.837 7.164 16 16 16 8.837 0 16-7.163 16-16 0-8.836-7.163-16-16-16zm7.944 12.809c-.251 6.516-3.463 10.832-10.992 10.702h-.486c-.447 0-4.543-.443-5.344-1.823 2.479.19 4.247-.406 5.12-1.136-1.048-.289-2.923-.461-3.251-2.848.384.104.618.221 1.299.113-1.307-.824-2.758-1.519-2.679-3.643.311.317 1.164.518 1.46.457-.768-.233-2.149-3.244-.974-4.781 1.984 1.79 4.075 3.482 7.804 3.643.227-2.214 1.24-3.699 3.168-4.325 1.84-.479 3.255.26 3.901 1.138.737-.224 1.453-.466 2.193-.685-.004.833-.569 1.463-.935 1.709.747.165 1.423-.475 1.423-.475-.184.963-1.094 1.725-1.707 1.954z" />
@@ -544,7 +575,7 @@
         </li>
         <li class="social-list-item">
           <a href="https://www.instagram.com/" class="social-list-link social-list-link--instagram">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <svg class="social-link-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
                 <title>Instagram</title>
                 <path
@@ -559,7 +590,7 @@
         </li>
         <li class="social-list-item">
           <a href="https://www.facebook.com/" class="social-list-link social-list-link--facebook">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <svg class="social-link-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <title>Facebook</title>
               <path fill="#FFF"
                 d="M16 0C7.164 0 0 7.163 0 16s7.164 16 16 16c8.837 0 16-7.164 16-16S24.837 0 16 0zm4.062 9.455h-3.021v3.444h3.021v3.445h-3.021v8.61H14.02v-8.61H11v-3.445h3.021V9.455c0-1.902 1.353-3.445 3.021-3.445h3.021v3.445z" />
@@ -568,7 +599,7 @@
         </li>
         <li class="social-list-item">
           <a href="https://vk.com/" class="social-list-link social-list-link--vk">
-            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
+            <svg class="social-link-icon" xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32">
               <g fill="#FFF">
                 <title>Вконтакте</title>
                 <path
