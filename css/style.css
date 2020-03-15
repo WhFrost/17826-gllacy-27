@@ -425,8 +425,112 @@ body {
   display: block;
 }
 
-.cart {
+.cart-modal {
+  position: absolute;
+  top: 36px;
+  right: 0;
+  z-index: 12;
+
   display: none;
+  box-sizing: border-box;
+  width: 540px;
+  min-height: 242px;
+  padding-top: 24px;
+  padding-right: 16px;
+  padding-bottom: 20px;
+  padding-left: 15px;
+
+  background-color: #f8f7f4;
+  border-radius: 5px;
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
+}
+
+.user-cart {
+  position: relative;
+
+  margin-bottom: 13px;
+
+  border-collapse: collapse;
+
+  border-bottom: 1px solid #cacac7;
+}
+
+
+.user-cart-item {
+  min-height: 53px;
+}
+
+.cell {
+  padding-top: 5px;
+
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  vertical-align: top;
+  text-align: left;
+  color: #323232;
+}
+
+.column-1 {
+  position: relative;
+
+  width: 22px;
+}
+
+.column-2 {
+  padding: 0;
+  padding-bottom: 16px;
+  padding-left: 3px;
+}
+
+.column-3 {
+  padding-left: 10px;
+
+  text-align: left;
+}
+
+.column-4 {
+  width: 112px;
+
+  text-align: center;
+}
+
+.column-5 {
+  width: 82px;
+
+  text-align: center;
+}
+
+.cost-in-cart {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 16px;
+  color: #999999;
+}
+
+.cart-image {
+  border-radius: 50%;
+}
+
+.delete {
+  content: url("../img/cross-small.svg");
+}
+
+.total-cost {
+  display: block;
+  margin-right: -3px;
+  margin-bottom: 15px;
+
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 18px;
+  text-align: right;
+  color: #323232;
+}
+
+.user-menu-item-cart:hover .cart-modal,
+.user-menu-item-cart:focus .cart-modal {
+  display: block;
 }
 
 /* Modal */
@@ -1196,16 +1300,78 @@ body {
   text-decoration: none;
 }
 
-.subscribe {
-  display: none;
+.feedback {
+  position: absolute;
+  top: 338px;
+  left: 434px;
+
+  display: block;
+  box-sizing: border-box;
+  width: 477px;
+  height: 442px;
+  padding-top: 16px;
+  padding-left: 24px;
+
+  background-color: #f8f7f4;
+  border-radius: 10px;
 }
 
-.subscribe input {
+.feedback-title {
+  margin: 0;
+  margin-bottom: 19px;
+
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 28px;
+  color: #323232;
+}
+
+.feedback-modal-wrapper {
+  position: relative;
+}
+
+.feedback-modal-field {
+  width: 251px;
+  height: 13px;
+  margin-bottom: 20px;
+  padding-top: 14px;
+  padding-bottom: 15px;
+  padding-left: 13px;
+
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  color: #323232;
+
+  border: 1px solid #d3d3d2;
+  border-radius: 5px;
+}
+
+.feedback-modal-field-text {
+  width: 411px;
+  min-height: 130px;
+  padding-top: 8px;
+
+  resize: none;
+}
+
+.feedback-modal-field::placeholder {
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
   text-align: left;
   color: #999999;
+}
+
+.feedback-modal-field:hover {
+  border: 2px solid rgba(178, 178, 178, 0.52);
+}
+
+.modal-close {
+  content: url("../img/cross-big.svg");
+  position: absolute;
+  top: 15px;
+  right: 16px;
 }
 
 /* Maps & adress */
@@ -1627,6 +1793,16 @@ body {
   padding-left: 25px;
 }
 
+.button-cart {
+  position: absolute;
+  right: 14px;
+
+  padding-top: 8px;
+  padding-right: 16px;
+  padding-bottom: 11px;
+  padding-left: 15px;
+}
+
 .button-subscribe-form {
   padding-top: 9px;
   padding-right: 17px;
@@ -1643,6 +1819,16 @@ body {
   padding-right: 26px;
   padding-bottom: 13px;
   padding-left: 28px;
+}
+
+.button-feedback-form {
+  position: absolute;
+  right: 25px;
+
+  padding-top: 9px;
+  padding-right: 23px;
+  padding-bottom: 12px;
+  padding-left: 23px;
 }
 
 .button.disabled,

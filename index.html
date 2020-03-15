@@ -82,8 +82,10 @@
                 <form action="#" method="post" class="login">
                   <label for="user-name" class="visually-hidden">Имя пользователя</label>
                   <label for="user-pass" class="visually-hidden"> Пароль пользователя</label>
-                  <input class="user-login-field" type="email" name="user-name" id="user-name" placeholder="email@example.com" required>
-                  <input class="user-password-field" type="password" name="user-pass" id="user-pass" placeholder="••••••••" required>
+                  <input class="user-login-field" type="email" name="user-name" id="user-name"
+                    placeholder="email@example.com" required>
+                  <input class="user-password-field" type="password" name="user-pass" id="user-pass"
+                    placeholder="••••••••" required>
                   <button type="submit" class="button button-orange button-login-form">Войти</button>
                 </form>
                 <ul class="login-list">
@@ -391,24 +393,30 @@
           </div>
         </div>
         <img src="img/map.jpg" alt="" width="1200" height="430">
-
-        <!-- Subscribe form -->
-        <div class="subscribe">
-          <button type="button" class="close"></button>
-          <form action="#" method="post" class="subscribe-form">
-            <label for="name" class="visually-hidden">Ваше имя</label>
-            <label for="email" class="visually-hidden">Ваш email</label>
-            <label for="about" class="visually-hidden">Расскажите о себе</label>
-            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-            <input type="email" name="email" id="email" placeholder="email@example.com">
-            <textarea name="about" id="about" cols="20" rows="7" placeholder="В свободной форме"></textarea>
-            <button type="submit" class="button button-orange">Отправить</button>
-          </form>
-        </div>
-
-        <!-- Subscribe form -->
-
       </section>
+      <!-- Subscribe form -->
+      <section class="feedback">
+        <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+        <a class="modal-close"></a>
+        <form action="#" method="post" class="feedback-form">
+          <div class="feedback-modal-wrapper">
+            <label for="name" class="visually-hidden">Ваше имя</label>
+            <input class="feedback-modal-field" type="text" name="name" id="name" placeholder="Имя Фамилия">
+          </div>
+          <div class="feedback-modal-wrapper">
+            <label for="email" class="visually-hidden">Ваш email</label>
+            <input class="feedback-modal-field" type="email" name="email" id="email" placeholder="email@example.com">
+          </div>
+          <div class="feedback-modal-wrapper">
+            <label for="about" class="visually-hidden">Расскажите о себе</label>
+            <textarea class="feedback-modal-field feedback-modal-field-text" name="about" id="about" cols="50" rows="4" placeholder="В свободной форме"></textarea>
+          </div>
+          <button type="submit" class="button button-orange button-feedback-form">Отправить</button>
+        </form>
+      </section>
+
+      <!-- Subscribe form -->
+
       <!-- Maps & adress -->
 
       <!-- Footer -->
