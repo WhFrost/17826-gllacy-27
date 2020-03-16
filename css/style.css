@@ -425,6 +425,12 @@ body {
   display: block;
 }
 
+.full-cart {
+  color: #323232;
+
+  background-color: white;
+}
+
 .cart-modal {
   position: absolute;
   top: 36px;
@@ -644,9 +650,6 @@ body {
 .sort-wrapper {
   position: relative;
 
-  background-image: url("../img/select-arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 168px 16px;
   cursor: pointer;
 }
 
@@ -655,6 +658,17 @@ body {
   color: #323232;
 
   cursor: pointer;
+}
+
+.select-down {
+  position: absolute;
+  top: 14px;
+  right: 15px;
+}
+
+.sort-wrapper:hover .select-down-black,
+.sort-wrapper:focus .select-down-black {
+  fill: #323232;
 }
 
 .sort-filter-select {
@@ -837,15 +851,13 @@ body {
 .filters-checkbox input[type="checkbox"] + .checkbox-indicator {
   position: absolute;
   top: 0;
-  left: -3px;
+  left: -4px;
 
   width: 16px;
   height: 16px;
 
   border: 2px solid rgba(255, 255, 255, 0.8);
-  opacity: 0.8;
-
-  object-fit: contain;
+  border-radius: 3px;
 }
 
 .filters-checkbox input[type="checkbox"]:checked + .checkbox-indicator::before {
@@ -854,7 +866,8 @@ body {
   top: -3px;
   left: -3px;
 
-  border: 0;
+  width: 24px;
+  height: 20px;
 }
 
 .filters-checkbox input[type="checkbox"]:hover + .checkbox-indicator,
@@ -865,7 +878,7 @@ body {
 .filters-checkbox input[type="checkbox"]:focus + .checkbox-indicator {
   border-color: white;
   outline: thin dotted;
-  outline: 5px auto -webkit-focus-ring-color;
+  outline: 5px auto;
   outline-color: white;
 }
 
