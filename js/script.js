@@ -42,9 +42,9 @@ var modal = document.querySelector(".feedback");
 var overlay = document.querySelector(".feedback-overlay");
 var close = modal.querySelector(".modal-close");
 var form = modal.querySelector("form");
-var login = modal.querySelector("[name=user]");
+var login = modal.querySelector("[name=name]");
 var email = modal.querySelector("[name=email]");
-var message = modal.querySelector("[name=text]");
+var message = modal.querySelector("[name=about]");
 
 var isStorageSupport = true;
 var storage = "";
@@ -71,7 +71,21 @@ button.addEventListener("click", function (evt) {
 close.addEventListener("click", function (evt) {
   evt.preventDefault();
   modal.classList.remove("feedback-modal-show");
+  modal.classList.remove("feedback-overlay-error");
   overlay.classList.remove("feedback-overlay-show");
+});
+
+form.addEventListener("submit", function (evt) {
+  if (!login.value || !email.value || !message.value) {
+    evt.preventDefault();
+    modal.classList.remove("feedback-modal-error");
+    modal.offsetWidth = modal.offsetWidth;
+    modal.classList.add("feedback-modal-error");
+  } else {
+    if (isStorageSupport) {
+      localStorage.setItem("login", login.value);
+    }
+  }
 });
 
 window.addEventListener("keydown", function (evt) {
@@ -79,6 +93,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (modal.classList.contains("feedback-modal-show")) {
       modal.classList.remove("feedback-modal-show");
+      modal.classList.remove("feedback-overlay-error");
       overlay.classList.remove("feedback-overlay-show");
     }
   }
@@ -87,6 +102,7 @@ window.addEventListener("keydown", function (evt) {
 overlay.addEventListener("click", function() {
   if (modal.classList.contains("feedback-modal-show")) {
       modal.classList.remove("feedback-modal-show");
+      modal.classList.remove("feedback-overlay-error");
       overlay.classList.remove("feedback-overlay-show");
   }
 });
