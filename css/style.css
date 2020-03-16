@@ -429,7 +429,7 @@ body {
   position: absolute;
   top: 36px;
   right: 0;
-  z-index: 12;
+  z-index: 2;
 
   display: none;
   box-sizing: border-box;
@@ -1248,9 +1248,19 @@ body {
 
 /* Maps & adress */
 
-.map img {
-  display: block;
+
+.map {
+  position: relative;
+
   width: 100%;
+  height: 430px;
+
+  background-image: url("../img/map.jpg");
+}
+
+.map-wrapper {
+  width: 100%;
+  height: 430px;
 }
 
 .adress-wrapper {
@@ -1259,8 +1269,8 @@ body {
 
 .adress-container {
   position: absolute;
-  top: 63px;
   right: 0;
+  bottom: 61px;
 
   width: 302px;
   min-height: 305px;
@@ -1300,15 +1310,23 @@ body {
   text-decoration: none;
 }
 
-.feedback {
-  position: absolute;
-  top: 338px;
-  left: 434px;
+.feedback-modal-wrapper {
+  position: relative;
 
-  display: block;
+  width: 100%;
+}
+
+.feedback {
+  position: fixed;
+  top: 340px;
+  left: 50%;
+  z-index: 4;
+
+  display: none;
   box-sizing: border-box;
   width: 477px;
   height: 442px;
+  margin-left: -237px;
   padding-top: 16px;
   padding-left: 24px;
 
@@ -1324,10 +1342,6 @@ body {
   font-size: 24px;
   line-height: 28px;
   color: #323232;
-}
-
-.feedback-modal-wrapper {
-  position: relative;
 }
 
 .feedback-modal-field {
@@ -1372,6 +1386,29 @@ body {
   position: absolute;
   top: 15px;
   right: 16px;
+
+  cursor: pointer;
+}
+
+.feedback-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 3;
+
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(50, 50, 50, 0.3);
+}
+
+.feedback-modal-show {
+  display: block;
+}
+
+.feedback-overlay-show {
+  display: block;
 }
 
 /* Maps & adress */
@@ -1468,7 +1505,7 @@ body {
 .main-footer {
   display: flex;
   justify-content: space-between;
-  padding-top: 10px;
+  padding-top: 12px;
   padding-bottom: 10px;
 }
 
@@ -1662,7 +1699,7 @@ body {
   position: absolute;
   bottom: 12px;
   left: -122px;
-  z-index: 10;
+  z-index: 1;
 
   font-size: 0;
 }

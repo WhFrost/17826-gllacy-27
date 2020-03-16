@@ -374,6 +374,7 @@
 
       <!-- Maps & adress -->
       <section class="map">
+        <div class="map-wrapper" id="map__canvas"></div>
         <div class="adress-wrapper container">
           <div class="adress-container">
             <p class="adress-content">
@@ -392,29 +393,29 @@
             <a href="#" class="button button-orange button-feedback">Форма обратной связи</a>
           </div>
         </div>
-        <img src="img/map.jpg" alt="" width="1200" height="430">
       </section>
       <!-- Subscribe form -->
-      <section class="feedback">
-        <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
-        <a class="modal-close"></a>
-        <form action="#" method="post" class="feedback-form">
-          <div class="feedback-modal-wrapper">
-            <label for="name" class="visually-hidden">Ваше имя</label>
-            <input class="feedback-modal-field" type="text" name="name" id="name" placeholder="Имя Фамилия">
-          </div>
-          <div class="feedback-modal-wrapper">
-            <label for="email" class="visually-hidden">Ваш email</label>
-            <input class="feedback-modal-field" type="email" name="email" id="email" placeholder="email@example.com">
-          </div>
-          <div class="feedback-modal-wrapper">
-            <label for="about" class="visually-hidden">Расскажите о себе</label>
-            <textarea class="feedback-modal-field feedback-modal-field-text" name="about" id="about" cols="50" rows="4" placeholder="В свободной форме"></textarea>
-          </div>
-          <button type="submit" class="button button-orange button-feedback-form">Отправить</button>
-        </form>
-      </section>
-
+        <section class="feedback">
+          <h2 class="feedback-title">Мы обязательно вам ответим!</h2>
+          <a class="modal-close"><span class="visually-hidden">Закрыть</span></a>
+          <form action="#" method="post" class="feedback-form">
+            <div class="feedback-modal-wrapper">
+              <label for="name" class="visually-hidden">Ваше имя</label>
+              <input class="feedback-modal-field" type="text" name="name" id="name" placeholder="Имя Фамилия">
+            </div>
+            <div class="feedback-modal-wrapper">
+              <label for="email" class="visually-hidden">Ваш email</label>
+              <input class="feedback-modal-field" type="email" name="email" id="email" placeholder="email@example.com">
+            </div>
+            <div class="feedback-modal-wrapper">
+              <label for="about" class="visually-hidden">Расскажите о себе</label>
+              <textarea class="feedback-modal-field feedback-modal-field-text" name="about" id="about" cols="50"
+                rows="4" placeholder="В свободной форме"></textarea>
+            </div>
+            <button type="submit" class="button button-orange button-feedback-form">Отправить</button>
+          </form>
+        </section>
+        <div class="feedback-overlay"></div>
       <!-- Subscribe form -->
 
       <!-- Maps & adress -->
@@ -521,6 +522,8 @@
       <!-- Footer -->
     </main>
   </div>
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
