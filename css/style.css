@@ -1283,19 +1283,23 @@ body {
   right: 0;
   bottom: 61px;
 
+  box-sizing: border-box;
   width: 302px;
   min-height: 305px;
   margin: 0;
+  padding-top: 26px;
+  padding-right: 25px;
+  padding-bottom: 30px;
+  padding-left: 25px;
 
   background-color: white;
   border-radius: 15px;
 }
 
-.adress-content {
+.adress-content,
+.adress-content-phone-order,
+.adress-content-work-time {
   margin: 0;
-  margin-bottom: 31px;
-  padding-top: 26px;
-  padding-left: 25px;
 
   font-weight: 400;
   font-size: 14px;
@@ -1306,14 +1310,21 @@ body {
 
 .adress-company {
   display: block;
-  padding-bottom: 20px;
+  margin-bottom: 19px;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 24px;
 }
 
+.adress-content-phone-order {
+  margin-bottom: 5px;
+}
+
 .phone {
+  display: block;
+  margin-bottom: 3px;
+
   font-weight: 700;
   font-size: 18px;
   line-height: 22px;
@@ -1677,7 +1688,7 @@ body {
 .slider-container {
   width: 900px;
   margin-right: auto;
-  margin-bottom: 52px;
+  margin-bottom: 50px;
   margin-left: auto;
   padding: 0 20px;
 }
