@@ -93,7 +93,7 @@ window.addEventListener("keydown", function (evt) {
     evt.preventDefault();
     if (modal.classList.contains("feedback-modal-show")) {
       modal.classList.remove("feedback-modal-show");
-      modal.classList.remove("feedback-overlay-error");
+      modal.classList.remove("feedback-modal-error");
       overlay.classList.remove("feedback-overlay-show");
     }
   }
@@ -102,7 +102,7 @@ window.addEventListener("keydown", function (evt) {
 overlay.addEventListener("click", function() {
   if (modal.classList.contains("feedback-modal-show")) {
       modal.classList.remove("feedback-modal-show");
-      modal.classList.remove("feedback-overlay-error");
+      modal.classList.remove("feedback-modal-error");
       overlay.classList.remove("feedback-overlay-show");
   }
 });

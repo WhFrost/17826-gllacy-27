@@ -328,6 +328,10 @@ body {
 }
 
 .search-field:hover {
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 13px;
+
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
 
@@ -393,6 +397,10 @@ body {
 .user-password-field:hover,
 .user-login-field:focus,
 .user-password-field:focus {
+  padding-top: 12px;
+  padding-bottom: 14px;
+  padding-left: 13px;
+
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
 
@@ -520,6 +528,8 @@ body {
 
 .delete {
   content: url("../img/cross-small.svg");
+
+  cursor: pointer;
 }
 
 .total-cost {
@@ -980,7 +990,11 @@ body {
 }
 
 .catalog-item:not(:nth-child(4n)) {
-  margin-right: 26px;
+  margin-right: 13px;
+}
+
+.catalog-item:not(:nth-child(4n+1)) {
+  margin-left: 13px;
 }
 
 .catalog-item-link {
@@ -1025,26 +1039,25 @@ body {
   line-height: 45px;
 }
 
-/*
 .catalog-item:hover {
   z-index: 2;
 
-  min-height: 405px;
+  margin: 0;
+  margin-left: 0;
+  padding-right: 13px;
+  padding-left: 13px;
 
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.4);
 }
-*/
 
-.button-catalog {
-  position: absolute;
-  left: 30px;
-  z-index: 2;
+.catalog-item:nth-child(4n):hover {
+  margin-right: -13px;
+}
 
-  display: none;
-  margin-top: 10px;
-  margin-bottom: 22px;
+.catalog-item:nth-child(4n+1):hover {
+  margin-left: -13px;
 }
 
 .catalog-item:hover .button-catalog {
@@ -1240,6 +1253,9 @@ body {
 }
 
 .subscribe-email:hover {
+  padding-right: 14px;
+  padding-left: 14px;
+
   border: 2px solid rgba(178, 178, 178, 0.52);
 }
 
@@ -1400,7 +1416,15 @@ body {
 }
 
 .feedback-modal-field:hover {
+  padding-top: 13px;
+  padding-bottom: 14px;
+  padding-left: 12px;
+
   border: 2px solid rgba(178, 178, 178, 0.52);
+}
+
+.feedback-modal-field-text:hover {
+  padding-top: 7px;
 }
 
 .modal-close {
@@ -1521,26 +1545,20 @@ body {
 /* Page paginator */
 
 /* Footer */
-.footer-line::before {
-  content: "";
-  position: absolute;
-  bottom: -598px;
 
-  width: 1146px;
-  height: 1px;
-
-  background-color: rgba(255, 255, 255, 0.3);
+.footer-line {
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .main-footer {
   display: flex;
   justify-content: space-between;
-  padding-top: 12px;
+  padding-top: 11px;
   padding-bottom: 10px;
 }
 
 .social {
-  padding-top: 5px;
+  padding-top: 6px;
 }
 
 .social-list {
@@ -1755,7 +1773,7 @@ body {
 
 #product-2:checked ~ .site-wrapper {
   background-color: #8996a6;
-  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png   ");
+  background-image: url("../img/chocolate-ice-cream-and-lemon-sorbet.png");
 }
 
 #product-3:checked ~ .site-wrapper {
@@ -1828,7 +1846,7 @@ body {
   padding-top: 6px;
   padding-right: 28px;
   padding-bottom: 8px;
-  padding-left: 28px;
+  padding-left: 26px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1874,6 +1892,19 @@ body {
   padding-top: 9px;
   padding-right: 17px;
   padding-bottom: 11px;
+  padding-left: 18px;
+}
+
+.button-catalog {
+  position: absolute;
+  bottom: -21px;
+  left: 45px;
+  z-index: 2;
+
+  display: none;
+  padding-top: 8px;
+  padding-right: 17px;
+  padding-bottom: 12px;
   padding-left: 18px;
 }
 
