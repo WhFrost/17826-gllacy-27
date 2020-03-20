@@ -314,8 +314,8 @@ body {
 .search-field {
   width: 100%;
   height: 44px;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
   padding-left: 14px;
 
   font-weight: 700;
@@ -328,8 +328,8 @@ body {
 }
 
 .search-field:hover {
-  padding-top: 13px;
-  padding-bottom: 14px;
+  padding-top: 9px;
+  padding-bottom: 9px;
   padding-left: 13px;
 
   border: 2px solid rgba(178, 178, 178, 0.52);
@@ -368,11 +368,12 @@ body {
 
 .user-login-field,
 .user-password-field {
-  width: 224px;
-  height: 13px;
+  box-sizing: border-box;
+  width: 241px;
+  height: 44px;
   margin-bottom: 21px;
-  padding-top: 13px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 12px;
   padding-left: 14px;
 
   font-weight: 700;
@@ -397,8 +398,8 @@ body {
 .user-password-field:hover,
 .user-login-field:focus,
 .user-password-field:focus {
-  padding-top: 12px;
-  padding-bottom: 14px;
+  padding-top: 9px;
+  padding-bottom: 11px;
   padding-left: 13px;
 
   border: 2px solid rgba(178, 178, 178, 0.52);
@@ -1248,7 +1249,9 @@ body {
   box-sizing: border-box;
   width: 368px;
   padding: 0;
+  padding-top: 15px;
   padding-right: 15px;
+  padding-bottom: 13px;
   padding-left: 15px;
 
   font-weight: 700;
@@ -1262,7 +1265,9 @@ body {
 }
 
 .subscribe-email:hover {
+  padding-top: 14px;
   padding-right: 14px;
+  padding-bottom: 12px;
   padding-left: 14px;
 
   border: 2px solid rgba(178, 178, 178, 0.52);
@@ -1383,7 +1388,7 @@ body {
 
 .feedback-title {
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 18px;
 
   font-weight: 500;
   font-size: 24px;
@@ -1392,11 +1397,11 @@ body {
 }
 
 .feedback-modal-field {
-  width: 251px;
-  height: 13px;
+  box-sizing: border-box;
+  width: 267px;
   margin-bottom: 20px;
-  padding-top: 14px;
-  padding-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 10px;
   padding-left: 13px;
 
   font-weight: 700;
@@ -1409,8 +1414,9 @@ body {
 }
 
 .feedback-modal-field-text {
-  width: 411px;
-  min-height: 130px;
+  box-sizing: border-box;
+  width: 428px;
+  min-height: 155px;
   padding-top: 8px;
 
   resize: none;
@@ -1425,8 +1431,8 @@ body {
 }
 
 .feedback-modal-field:hover {
-  padding-top: 13px;
-  padding-bottom: 14px;
+  padding-top: 7px;
+  padding-bottom: 9px;
   padding-left: 12px;
 
   border: 2px solid rgba(178, 178, 178, 0.52);
