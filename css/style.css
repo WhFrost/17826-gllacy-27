@@ -985,8 +985,8 @@ body {
   position: relative;
 
   width: 267px;
+  margin-top: 6px;
   margin-bottom: 31px;
-  padding-top: 6px;
 }
 
 .catalog-item:not(:nth-child(4n)) {
@@ -1020,7 +1020,8 @@ body {
 
 .cost-container {
   position: absolute;
-  bottom: -1px;
+  bottom: -3px;
+  left: -2px;
 }
 
 .hit {
@@ -1043,7 +1044,9 @@ body {
   z-index: 2;
 
   margin: 0;
+  margin-bottom: -44px;
   margin-left: 0;
+  padding-top: 6px;
   padding-right: 13px;
   padding-left: 13px;
 
@@ -1058,6 +1061,12 @@ body {
 
 .catalog-item:nth-child(4n+1):hover {
   margin-left: -13px;
+}
+
+.catalog-item:hover .item-description {
+  margin-bottom: 75px;
+
+  color: #ffbc9e;
 }
 
 .catalog-item:hover .button-catalog {
@@ -1472,7 +1481,7 @@ body {
   display: flex;
   justify-content: flex-end;
   margin-top: 47px;
-  margin-bottom: 33px;
+  margin-bottom: 31px;
 
   font-weight: 500;
   font-size: 16px;
@@ -1897,7 +1906,7 @@ body {
 
 .button-catalog {
   position: absolute;
-  bottom: -21px;
+  bottom: 23px;
   left: 45px;
   z-index: 2;
 
