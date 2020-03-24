@@ -1754,11 +1754,16 @@ body {
 }
 
 .modal-close {
-  content: url("../img/cross-big.svg");
   position: absolute;
   top: 15px;
   right: 16px;
 
+  width: 18px;
+  height: 17px;
+
+  background-image: url("../img/svg/cross-big.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
   cursor: pointer;
 }
 
