@@ -85,7 +85,6 @@ body {
   -webkit-box-pack: justify;
 }
 
-.menu-link,
 .user-menu-link {
   display: block;
   padding: 7px 14px;
@@ -107,8 +106,8 @@ body {
   list-style: none;
 }
 
-.menu-link:hover,
-.menu-link:focus,
+.menu-link:hover:not(.active-page),
+.menu-link:focus:not(.active-page),
 .user-menu-link:hover,
 .user-menu-link:focus {
   color: #323232;
@@ -117,25 +116,40 @@ body {
 }
 
 .menu-link {
-  color: white;
-  text-decoration: underline;
+  display: block;
+  margin: 7px 14px;
 
-  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
-          text-decoration-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.menu-item:hover .menu-link,
-.menu-item:focus .menu-link {
+.active-page {
+  margin: 0;
+  padding: 7px 14px;
+
+  background-color: #d07058;
+  border-radius: 15px;
+}
+
+.menu-item:hover .menu-link:not(.active-page),
+.menu-item:focus .menu-link:not(.active-page) {
+  margin: 0;
+  padding: 7px 14px;
+
   color: #323232;
 
   background-color: white;
+  border-radius: 15px;
 }
 
 .menu-item:active .menu-link {
   color: #323232;
 
   background-color: #ededed;
-  box-shadow: inset 0 2px 1px 0 #696969;;
+  box-shadow: inset 0 2px 1px 0 #696969;
+  ;
 }
 
 .submenu-list {
@@ -155,12 +169,6 @@ body {
 .catalog-menu:hover .submenu-list,
 .catalog-menu:focus .submenu-list {
   display: block;
-}
-
-.active-page {
-  text-decoration: none;
-
-  background-color: #d07058;
 }
 
 .submenu-item {
@@ -215,12 +223,16 @@ body {
   border-bottom-left-radius: 5px;
 }
 
-.submenu-list .submenu-link:hover:not(.active-page),
-.submenu-list .submenu-link:focus:not(.active-page) {
+.active-submenu-page {
+  background-color: #d07058;
+}
+
+.submenu-list .submenu-link:hover:not(.active-submenu-page),
+.submenu-list .submenu-link:focus:not(.active-submenu-page) {
   background-color: #fbded7;
 }
 
-.submenu-list .submenu-link:active:not(.active-page) {
+.submenu-list .submenu-link:active:not(.active-submenu-page) {
   background-color: #f6b5a5;
 }
 
@@ -489,6 +501,42 @@ body {
   color: #999999;
 }
 
+.user-login-field::-webkit-input-placeholder,
+.user-password-field::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-login-field::-moz-placeholder,
+.user-password-field::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-login-field:-ms-input-placeholder,
+.user-password-field:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-login-field::-ms-input-placeholder,
+.user-password-field::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
 .user-login-field::placeholder,
 .user-password-field::placeholder {
   font-weight: 400;
@@ -667,7 +715,7 @@ body {
 
 .breadcrumbs {
   position: relative;
-  top: -22px;
+  top: -23px;
   left: -374px;
 
   width: 400px;
@@ -700,10 +748,9 @@ body {
 
 .breadcrumbs-link {
   color: white;
-  text-decoration: underline;
+  text-decoration: none;
 
-  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
-          text-decoration-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .breadcrumbs-link:hover,
@@ -711,12 +758,11 @@ body {
 .breadcrumbs-link:active {
   color: #ffbc9e;
 
-  -webkit-text-decoration-color: #ffbc9e;
-          text-decoration-color: #ffbc9e;
+  border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 
 .breadcrumbs-item:last-child .breadcrumbs-link {
-  text-decoration: none;
+  border: 0;
 }
 
 /* Breadcrumbs */
@@ -968,7 +1014,7 @@ body {
 
 .fillers {
   width: 703px;
-  margin-top: 17px;
+  margin-top: 16px;
 }
 
 .fillers-wrapper {
@@ -1540,7 +1586,7 @@ body {
   width: 302px;
   min-height: 305px;
   margin: 0;
-  padding-top: 27px;
+  padding-top: 26px;
   padding-right: 25px;
   padding-bottom: 30px;
   padding-left: 25px;
@@ -1887,6 +1933,8 @@ body {
 
 .footer-menu-list {
   position: relative;
+  top: -2px;
+  left: 3px;
 
   display: -webkit-box;
   display: flex;
@@ -1897,9 +1945,6 @@ body {
   padding: 0;
 
   list-style: none;
-  font-weight: 400;
-  font-size: 13px;
-  line-height: 18px;
 
   -webkit-box-direction: normal;
   -webkit-box-orient: vertical;
@@ -1910,18 +1955,10 @@ body {
   margin-right: 29px;
 }
 
-.footer-menu-list:last-child {
-  padding-top: 2px;
-}
-
-.footer-menu-item:last-child {
-  padding-top: 5px;
-}
-
 .footer-menu-item svg {
   position: absolute;
-  top: 24px;
-  left: -20px;
+  top: 26px;
+  left: -23px;
 }
 
 .footer-menu-item .like-link {
@@ -1929,12 +1966,13 @@ body {
 }
 
 .footer-menu-link {
-  display: block;
-
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 18px;
   color: white;
+  text-decoration: none;
 
-  -webkit-text-decoration-color: rgba(255, 255, 255, 0.2);
-          text-decoration-color: rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .footer-menu-link:hover,
@@ -1942,14 +1980,14 @@ body {
 .footer-menu-link:active {
   color: #ffbc9e;
 
-  -webkit-text-decoration-color: #ffbc9e;
-          text-decoration-color: #ffbc9e;
+  border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 
 .copyright {
   display: -webkit-box;
   display: flex;
   flex-direction: column;
+  width: 189px;
   padding-top: 5px;
 
   font-weight: 400;
@@ -1961,11 +1999,19 @@ body {
   -webkit-box-orient: vertical;
 }
 
+.footer-copyright {
+  margin: 0;
+
+  color: #fefefe;
+}
+
 .copyright-link {
   padding-top: 5px;
 
-  color: white;
+  color: #fefefe;
   text-decoration: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .copyright-link:hover,
@@ -1973,16 +2019,7 @@ body {
 .copyright-link:active {
   color: #ffbc9e;
 
-  -webkit-text-decoration-color: #ffbc9e;
-          text-decoration-color: #ffbc9e;
-}
-
-.footer-copyright {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.footer-copyright:hover {
-  border-bottom: 1px solid #ffbc9e;;
+  border-bottom: 1px solid rgba(249, 172, 159, 0.3);
 }
 
 /* Footer */
