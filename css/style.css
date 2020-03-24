@@ -537,6 +537,42 @@ body {
   color: #999999;
 }
 
+.user-login-field::-webkit-input-placeholder,
+.user-password-field::-webkit-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-login-field::-moz-placeholder,
+.user-password-field::-moz-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-login-field:-ms-input-placeholder,
+.user-password-field:-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
+.user-login-field::-ms-input-placeholder,
+.user-password-field::-ms-input-placeholder {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  text-align: left;
+  color: #999999;
+}
+
 .user-login-field::placeholder,
 .user-password-field::placeholder {
   font-weight: 400;
